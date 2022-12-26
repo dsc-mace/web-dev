@@ -1,7 +1,7 @@
-// import React from 'react'
+import React from 'react'
 
-// import { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 // function Signup() {
 
@@ -91,6 +91,49 @@ import { Form, Button } from "react-bootstrap";
 import styles from "./SignUp.module.css";
 
 const SignUp = () => {
+
+    const [Fname, setFname]=useState("")
+const [Mname, setMname]=useState("")
+const [Lname, setLname]=useState("")
+const [Email, setEmail]=useState("")
+const [Phone, setPhone]=useState("")
+const [Password, setPassword]=useState("")
+const [Cpassword, setCpassword]=useState("")
+const [Designation, setDesignation]=useState("")
+const [Adress, setAdress]=useState("")
+const [City, setCity]=useState("")
+const [Country, setCountry]=useState("")
+const [ZipCode, setZipcode]=useState("")
+const navigate = useNavigate();
+async function register(){
+
+    let item = {
+        Fname,
+        Mname,
+        Lname,
+        Email,
+        Phone,
+        Password,
+        Cpassword,
+        Designation,
+        Adress,
+        City,
+        Country,
+        ZipCode
+    }
+    console.log(Email,Password,Designation)
+    let result = await fetch("http://metics.us:8000/register/",{
+        method: 'POST',
+        body: JSON.stringify(item),
+        headers:{
+            "Content-Type": 'application/json',
+        }
+    })
+
+    result = await result.json()
+    localStorage.setItem("user-info", JSON.stringify(result))
+    navigate("/")
+}
   return (
     <div className={styles.signUp}>
       <div className={styles.content}>
@@ -103,55 +146,67 @@ const SignUp = () => {
           <div className={styles.emailParent}>
             <Form.Group className={styles.emailFormgroup}>
               <Form.Label>First name</Form.Label>
-              <Form.Control type="text" placeholder="First Name" />
+              {/* <Form.Control type="text" placeholder="First Name" />
+               */}
+               <input type="text" onChange={(e)=>setFname(e.target.value)} className='form-control' placeholder='First Name'/>
             </Form.Group>
             <Form.Group className={styles.emailFormgroup}>
               <Form.Label>Middle name</Form.Label>
-              <Form.Control type="text" placeholder="Middle Name" />
+              <input type="text" onChange={(e)=>setMname(e.target.value)} className='form-control' placeholder='Middle Name'/>
             </Form.Group>
             <Form.Group className={styles.emailFormgroup}>
               <Form.Label>Last name</Form.Label>
-              <Form.Control type="text" placeholder="Last Name" />
+              {/* <Form.Control type="text" placeholder="Last Name" /> */}
+              <input type="text" onChange={(e)=>setLname(e.target.value)} className='form-control' placeholder='Last Name'/>
             </Form.Group>
           </div>
           <Form.Group className={styles.passwordFormgroup}>
             <Form.Label>Password</Form.Label>
-            <Form.Control type="text" placeholder="Password" />
+            {/* <Form.Control type="text" placeholder="Password" /> */}
+            <input type="password" onChange={(e)=>setPassword(e.target.value)} className='form-control' placeholder='Password'/>
           </Form.Group>
           <Form.Group className={styles.passwordFormgroup}>
             <Form.Label>Confirm Password</Form.Label>
-            <Form.Control type="text" placeholder="Confirm Password" />
+            {/* <Form.Control type="text" placeholder="Confirm Password" /> */}
+            <input type="password" onChange={(e)=>setCpassword(e.target.value)} className='form-control' placeholder='Confirm Password'/>
           </Form.Group>
           <Form.Group className={styles.passwordFormgroup}>
             <Form.Label>Email</Form.Label>
-            <Form.Control type="text" placeholder="Email" />
+            {/* <Form.Control type="text" placeholder="Email" /> */}
+            <input type="text" onChange={(e)=>setEmail(e.target.value)} className='form-control' placeholder='Email'/>
           </Form.Group>
           <Form.Group className={styles.passwordFormgroup}>
             <Form.Label>Phone</Form.Label>
-            <Form.Control type="text" placeholder="Phone" />
+            {/* <Form.Control type="text" placeholder="Phone" /> */}
+            <input type="text" onChange={(e)=>setPhone(e.target.value)} className='form-control' placeholder='Phone'/>
           </Form.Group>
           <Form.Group className={styles.passwordFormgroup}>
             <Form.Label>Designation</Form.Label>
-            <Form.Control type="text" placeholder="Designation" />
+            {/* <Form.Control type="text" placeholder="Designation" /> */}
+            <input type="text" onChange={(e)=>setDesignation(e.target.value)} className='form-control' placeholder='Designation'/>
           </Form.Group>
           <Form.Group className={styles.passwordFormgroup}>
             <Form.Label>Address</Form.Label>
-            <Form.Control type="text" placeholder="Address" />
+            {/* <Form.Control type="text" placeholder="Address" /> */}
+            <input type="text" onChange={(e)=>setAdress(e.target.value)} className='form-control' placeholder='Adress'/>
           </Form.Group>
           <Form.Group className={styles.passwordFormgroup}>
             <Form.Label>City</Form.Label>
-            <Form.Control type="text" placeholder="City" />
+            {/* <Form.Control type="text" placeholder="City" /> */}
+            <input type="text" onChange={(e)=>setCity(e.target.value)} className='form-control' placeholder='City'/>
           </Form.Group>
           <Form.Group className={styles.passwordFormgroup}>
             <Form.Label>Country</Form.Label>
-            <Form.Control type="text" placeholder="Country" />
+            {/* <Form.Control type="text" placeholder="Country" /> */}
+            <input type="text" onChange={(e)=>setCountry(e.target.value)} className='form-control' placeholder='Country'/>
           </Form.Group>
           <Form.Group className={styles.passwordFormgroup}>
             <Form.Label>ZipCode</Form.Label>
-            <Form.Control type="text" placeholder="Zipcode" />
+            {/* <Form.Control type="text" placeholder="Zipcode" /> */}
+            <input type="text" onChange={(e)=>setZipcode(e.target.value)} className='form-control' placeholder='ZipCode'/>
           </Form.Group>
         </div>
-        <Button className={styles.button} variant="primary">
+        <Button className={styles.button} onClick={register} variant="primary">
           Sign Up
         </Button>
         <div className={styles.alreadyHaveAnAccountSign}>
