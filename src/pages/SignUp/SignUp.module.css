@@ -12,6 +12,9 @@
     position: relative;
     line-height: 125%;
     display: inline-block;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+
   }
   .body {
     font-size: var(--body-large-semibold-size);
@@ -20,6 +23,8 @@
     font-weight: 500;
     color: var(--greyscale-600);
     margin-top: -1px;
+    font-family: 'Inter', sans-serif;
+
   }
   .text {
     position: absolute;
@@ -74,6 +79,8 @@
   }
   .alreadyHaveAn {
     font-weight: 500;
+    font-family: 'Inter', sans-serif;
+
   }
   .signIn {
     font-weight: 800;

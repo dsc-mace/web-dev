@@ -1,0 +1,157 @@
+.side-bar-icon {
+    position: absolute;
+    top: 109px;
+    left: 0;
+    border-radius: var(--br-md);
+    width: 298px;
+    height: 915px;
+  }
+  .e-commercesort-asc-icon {
+    position: absolute;
+    top: 335.43px;
+    left: 0;
+    width: 25.19px;
+    height: 23.68px;
+  }
+  .e-commercedelivery-icon,
+  .generalbriefcase-icon,
+  .generalfile-icon {
+    position: absolute;
+    top: 279.2px;
+    left: 0;
+    width: 25.19px;
+    height: 23.68px;
+  }
+  .e-commercedelivery-icon,
+  .generalfile-icon {
+    top: 170.67px;
+    left: 3.15px;
+  }
+  .generalfile-icon {
+    top: 60.18px;
+    left: 0;
+  }
+  .navigation-menu-child {
+    width: 182.59259033203125px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .bids,
+  .clients,
+  .documents,
+  .reports,
+  .rfq,
+  .users {
+    position: absolute;
+    top: 55.25px;
+    left: 48.27px;
+    letter-spacing: 0.2px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    width: 49.32px;
+    height: 35.52px;
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0.01);
+  }
+  .bids,
+  .clients,
+  .documents,
+  .reports,
+  .users {
+    top: 110.49px;
+    width: 206.73px;
+  }
+  .clients,
+  .documents,
+  .reports,
+  .users {
+    top: 165.74px;
+    width: 117.53px;
+  }
+  .documents,
+  .reports,
+  .users {
+    top: 220.99px;
+    width: 71.36px;
+  }
+  .documents,
+  .reports {
+    top: 276.24px;
+    width: 142.72px;
+  }
+  .reports {
+    top: 331.48px;
+    width: 98.64px;
+  }
+  .e-commercetrolley-icon {
+    position: absolute;
+    top: 113.44px;
+    left: 0;
+    width: 25.19px;
+    height: 23.69px;
+  }
+  .communicationcontacts-icon,
+  .navigation-menu {
+    position: absolute;
+    top: 226.91px;
+    left: 1.05px;
+    width: 25.19px;
+    height: 23.68px;
+  }
+  .navigation-menu {
+    top: 267px;
+    left: 43px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.01);
+    width: 255px;
+    height: 367px;
+  }
+  .po-main-button {
+    width: 219px;
+    position: absolute;
+    top: 170px;
+    left: 32px;
+  }
+  .hello {
+    font-weight: 600;
+  }
+  .hello-anwar {
+    position: absolute;
+    top: 165px;
+    left: 322px;
+    font-size: var(--heading-h3-size);
+    color: var(--color-black);
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0.01);
+    font-family: var(--font-inter);
+  }
+  .supplier-dashboard-child {
+    position: absolute;
+    top: 109px;
+    left: 297px;
+    background: linear-gradient(
+      180deg,
+      rgba(217, 217, 217, 0.37),
+      rgba(217, 217, 217, 0)
+    );
+    width: 1143px;
+    height: 915px;
+  }
+  .asset-24x-icon {
+    position: absolute;
+    top: 34px;
+    left: 52px;
+    width: 164px;
+    height: 47px;
+    object-fit: cover;
+  }
+  .supplier-dashboard {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 1024px;
+    text-align: left;
+    font-size: var(--font-size-lg);
+    color: var(--color-white);
+    font-family: var(--heading-h3);
+  }
+  
