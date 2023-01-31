@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+.asset-24x-1 {
+  /* position: absolute; */
+  top: 73px;
+  left: 48px;
+  width: 163px;
+  height: 47px;
+  /* object-fit: cover; */
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 10 -20px;
+  top: 100px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.Adjust{
+    top: 100px;
+}
+
+.card1 {
+  height: 100%;
+  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 96px;
+  float: right;
+  text-align: center;
+  background-color: #F7971E;
+  color: #ffffff;
+  border-radius: 10%;
+  font-weight: bold;
+}
+.card2 {
+  height: 100%;
+  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 64px;
+  float: right;
+  text-align: center;
+  background-color: #0575E6;
+  color: #ffffff;
+  border-radius: 10%;
+  font-weight: bold;
+}
+.card3 {
+  height: 100%;
+  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 64px;
+  float: right;
+  text-align: center;
+  background-color: #FF0000;
+  color: #ffffff;
+  border-radius: 10%;
+  font-weight: bold;
+}
+.sizes{
+   padding-left: 3%;
+   /* left: 20px;
+   top: 100px; */
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+  /* height: 100%;
+    width: 75%; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 64px;
+  float: right;
+  text-align: center;
+  background-color: #ffffff;
+}

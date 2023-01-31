@@ -738,11 +738,11 @@ const SignUp = () => {
       </div>
       <Form.Group className="password-formgroup">
         {/* <Form.Label></Form.Label> */}
-        <Form.Control type="text" placeholder="Password" />
+        <Form.Control type="password" placeholder="Password" />
       </Form.Group>
       <Form.Group className="password-formgroup1">
         {/* <Form.Label></Form.Label>    */}
-        <Form.Control type="text" placeholder="Confirm Password" />
+        <Form.Control type="password" placeholder="Confirm Password" />
       </Form.Group>
       <Form.Group className="email-formgroup4">
         {/* <Form.Label>Email</Form.Label> */}
@@ -786,7 +786,7 @@ const SignUp = () => {
       
       <img className="asset-24x-1" alt="" src={require('../images/logo.png')} />
       <Button className="button" variant="primary">
-        Sign Up
+        Proceed
       </Button>
     </div>
   );
