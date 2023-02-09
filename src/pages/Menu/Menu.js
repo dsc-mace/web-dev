@@ -1,5 +1,6 @@
 import React from "react";
 import "./Menu.css";
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
@@ -17,10 +18,13 @@ function Menu() {
       <br />
       <br />
       <div className="row">
+        
         <div className="column">
+      <Link to="/Signin" >
           <div className="card1">
             <h3>Supplier Login</h3>
           </div>
+      </Link>
         </div>
 
         <div className="column">
