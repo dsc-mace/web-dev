@@ -44,8 +44,8 @@ body {
   padding: 96px;
   float: right;
   text-align: center;
-  background-color: #F7971E;
-  color: #ffffff;
+  /* background-color: #F7971E; */
+  /* color: #ffffff; */
   border-radius: 10%;
   font-weight: bold;
 }

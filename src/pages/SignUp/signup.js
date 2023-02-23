@@ -703,10 +703,28 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 // import "./SignUp.module.css";
 import "./SignUp.css";
 
 const SignUp = () => {
+
+  const [Fname, setFname]=useState("")
+  const [Mname, setMname]=useState("")
+  const [Lname, setLname]=useState("")
+  const [Email, setEmail]=useState("")
+  const [Phone, setPhone]=useState("")
+  const [Password, setPassword]=useState("")
+  const [Cpassword, setCpassword]=useState("")
+  const [Designation, setDesignation]=useState("")
+  const [Adress, setAdress]=useState("")
+  const [City, setCity]=useState("")
+  const [Country, setCountry]=useState("")
+  const [ZipCode, setZipcode]=useState("")
+  const navigate = useNavigate();
+
+
   return (
     <div className="sign-up">
       <div className="content">
@@ -719,30 +737,42 @@ const SignUp = () => {
           <div className="email-parent">
             <Form.Group className="email-formgroup">
               <Form.Label></Form.Label>
-              <Form.Control type="text" placeholder="First Name" />
+              <Form.Control type="text" 
+              onChange={(e)=>setFname(e.target.value)}
+              placeholder="First Name" />
             </Form.Group>
             <Form.Group className="email-formgroup">
               <Form.Label></Form.Label>
-              <Form.Control type="text" placeholder="Middle Name" />
+              <Form.Control type="text"
+              onChange={(e)=>setMname(e.target.value)}
+              placeholder="Middle Name" />
             </Form.Group>
           </div>
           <Form.Group className="email-formgroup2">
             <Form.Label></Form.Label>
-            <Form.Control type="text" placeholder="Last Name" />
+            <Form.Control type="text"
+            onChange={(e)=>setLname(e.target.value)}
+            placeholder="Last Name" />
           </Form.Group>
           <Form.Group className="email-formgroup3">
             <Form.Label></Form.Label>
-            <Form.Control type="text" placeholder="Email" />
+            <Form.Control type="text" 
+            onChange={(e)=>setEmail(e.target.value)}
+            placeholder="Email" />
           </Form.Group>
         </div>
       </div>
       <Form.Group className="password-formgroup">
         {/* <Form.Label></Form.Label> */}
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Control type="password"
+        onChange={(e)=>setPassword(e.target.value)}
+        placeholder="Password" />
       </Form.Group>
       <Form.Group className="password-formgroup1">
         {/* <Form.Label></Form.Label>    */}
-        <Form.Control type="password" placeholder="Confirm Password" />
+        <Form.Control type="password"
+        onChange={(e)=>setCpassword(e.target.value)}
+        placeholder="Confirm Password" />
       </Form.Group>
       <Form.Group className="email-formgroup4">
         {/* <Form.Label>Email</Form.Label> */}
@@ -750,28 +780,40 @@ const SignUp = () => {
       </Form.Group>
       <Form.Group className="email-formgroup5">
         {/* <Form.Label>Email</Form.Label> */}
-        <Form.Control type="text" placeholder="Phone" />
+        <Form.Control type="text" 
+        onChange={(e)=>setPhone(e.target.value)}
+        placeholder="Phone" />
       </Form.Group>
       <Form.Group className="email-formgroup6">
         {/* <Form.Label>Email</Form.Label> */}
-        <Form.Control type="text" placeholder="Designation" />
+        <Form.Control type="text" 
+        onChange={(e)=>setDesignation(e.target.value)}
+        placeholder="Designation" />
       </Form.Group>
       <Form.Group className="email-formgroup7">
         {/* <Form.Label>Email</Form.Label> */}
-        <Form.Control type="text" placeholder="Address" />
+        <Form.Control type="text" 
+        onChange={(e)=>setAdress(e.target.value)}
+        placeholder="Address" />
       </Form.Group>
       <Form.Group className="email-formgroup8">
         {/* <Form.Label>Email</Form.Label> */}
-        <Form.Control type="text" placeholder="City" />
+        <Form.Control type="text" 
+        onChange={(e)=>setCity(e.target.value)}
+        placeholder="City" />
       </Form.Group>
       <Form.Group className="email-formgroup9">
         {/* <Form.Label>Email</Form.Label> */}
-        <Form.Control type="text" placeholder="Country" />
+        <Form.Control type="text" 
+        onChange={(e)=>setCountry(e.target.value)}
+        placeholder="Country" />
       </Form.Group>
       
       <Form.Group className="email-formgroup10">
         {/* <Form.Label>Email</Form.Label> */}
-        <Form.Control type="text" placeholder="ZipCode" />
+        <Form.Control type="text"
+        onChange={(e)=>setZipcode(e.target.value)}
+        placeholder="ZipCode" />
       </Form.Group>
       <div className="by-creating-an-container">
           <span className="by-creating-an-container1">

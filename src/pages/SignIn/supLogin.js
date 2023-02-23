@@ -1,6 +1,6 @@
 // import React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 // function SupLogin() {
 //   const [email, setEmail] = useState("");
@@ -60,58 +60,84 @@ const SupLogin = () => {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate(); 
-  useEffect(() => {
-    if (localStorage.getItem("user-info")) {
-      navigate  ("/Dashboard");
-    }
-  });
+  const location = useLocation();
+  // useEffect(() => {
+  //   if (localStorage.getItem("user-info")) {
+  //     navigate  ("/Dashboard");
+  //   }
+  // });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setIsLoading(true);
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   setIsLoading(true);
 
-    fetch('http://metics.us:8000/login/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setIsLoading(false);
-        // Store the user's token in a cookie or local storage
-        // Redirect the user to the homepage
-        localStorage.setItem("user-info", JSON.stringify(data));
-        navigate("/Dashboard");
-      })
-      .catch((error) => {
-        setIsLoading(false);
-        // Display an error message
-        console.log("Error");
-      });
-  };
+  //   fetch('http://metics.us:8000/login/', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({ email, password }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setIsLoading(false);
+  //       // Store the user's token in a cookie or local storage
+  //       // Redirect the user to the homepage
+  //       localStorage.setItem("user-info", JSON.stringify(data));
+  //       navigate("/Dashboard");
+  //     })
+  //     .catch((error) => {
+  //       setIsLoading(false);
+  //       // Display an error message
+  //       console.log("Error");
+  //     });
+  // };
 
 
 
 
 
  
-  async function login() {
-    console.log(email, password);
-    let item = { email, password };
-    let result = await fetch("http://metics.us:8000/login/", {
-      method: "POST",
+  async function login(e) {
+    // console.log(email, password);
+    // let item = { email, password };
+    // let result = await fetch("http://metics.us:8000/login/", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(item),
+    // });
+    // result = await result.json();
+    // localStorage.setItem("user-info", JSON.stringify(result));
+    // navigate("/Dashboard");
+    e.preventDefault();
+    const url = "http://metics.us:8000/login/";
+    fetch(url,{
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(item),
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      })
+    })
+    .then((response)=>{
+      return response.json();
+    }).then((data)=>{
+      localStorage.setItem('access', data.access);
+      localStorage.setItem('refresh', data.refresh);
+      console.log(location);
+      console.log(location.state);
+      console.log(location?.state?.previousUrl);
+      navigate(location?.state?.previousUrl ? location.state.previousUrl : '/Dashboard');
+      // console.log(localStorage);
     });
-    result = await result.json();
-    localStorage.setItem("user-info", JSON.stringify(result));
-    navigate("/Dashboard");
   }
   return (
+    // <form onSubmit={login}>
+
     <div className={styles.signIn}>
       <div className={styles.content}>
         <div className={styles.background} />
@@ -124,17 +150,19 @@ const SupLogin = () => {
         <div className={styles.input}>
           <Form.Group  className={styles.emailFormGroup}>
             {/* <Form.Label>Username or email</Form.Label> */}
-            <Form.Control onChange={(e)=>setEmail(e.target.value)} type="text" placeholder="Username or Email" />
+            <Form.Control value={email} onChange={(e)=>setEmail(e.target.value)} type="text" placeholder="Username or Email" />
           </Form.Group>
           <br />
           <Form.Group className={styles.emailFormGroup}>
             {/* <Form.Label>Password</Form.Label> */}
-            <Form.Control onChange={(e)=>setPassword(e.target.value)} type="text" placeholder="Password" />
+            <Form.Control value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder="Password" />
           </Form.Group>
         </div>
         <Button className={styles.button}
-         disabled={isLoading}
-        onClick={handleSubmit} variant="primary">
+        //  disabled={isLoading}
+        // onClick={handleSubmit}
+        onClick={login}
+         variant="primary">
           Sign In
         </Button>
         <div className={styles.frameDiv}>
@@ -248,6 +276,7 @@ const SupLogin = () => {
       <img className={styles.asset24x1} alt="" src="../asset-24x-1@2x.png" /> */}
       <img className={styles.asset24x1} alt="" src={require('../images/logo.png')} />
     </div>
+ 
   );
 };
 
