@@ -7,6 +7,8 @@ import Signup from "./pages/SignUp/signup";
 import SupplierDashboard from "./pages/SupDashboard/SupplierDashboard";
 import Users from "./pages/Dashboard/Users/Users";
 import Menu from "./pages/Menu/Menu";
+import Emailverify from "./pages/EmailVerify/Emailverify";
+import Rfq from "./pages/Dashboard/Rfq/Rfq"
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route exact path="/Signup" element={<Signup />}></Route>
         <Route exact path="/SupplierDashboard" element={<SupplierDashboard />}></Route>
         <Route exact path="/Users" element={<Users />}></Route>
+        <Route exact path="/Rfq" element={<Rfq />}></Route>
+        <Route exact path="/Emailverify" element={<Emailverify />}></Route>
       </Routes>
     </Router>
   );

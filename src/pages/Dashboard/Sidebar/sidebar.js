@@ -35,15 +35,28 @@ function Sidebar() {
           {/* <img className="locationhome-icon" alt="" src="../locationhome.svg" /> */}
           {/* <button className="dashboard1">Dashboard</button> */}
           <Link to="/Dashboard" className="dashboard1" style={{ textDecoration: 'none' }} >
+          <span className="las la-home"></span>
         DashBoard
       </Link>
         </div>
-        <Link className="rfq" style={{ textDecoration: 'none' }}>RFQ</Link>
-        <Link className="purchase-orders" style={{ textDecoration: 'none' }}>Purchase Orders</Link>
-        <Link className="suppliers" style={{ textDecoration: 'none' }}>Suppliers</Link>
-        <Link to='/Users' className="users" style={{ textDecoration: 'none' }}>Users</Link>
-        <Link className="documents" style={{ textDecoration: 'none' }}>Documents</Link>
-        <Link className="reports" style={{ textDecoration: 'none' }}>Reports</Link>
+        <Link className="rfq" style={{ textDecoration: 'none' }}>
+        <span className ="las la-file-alt"></span>
+        RFQ</Link>
+        <Link className="purchase-orders" style={{ textDecoration: 'none' }}>
+        <span className ="las la-shopping-cart"></span>
+        Purchase Orders</Link>
+        <Link className="suppliers" style={{ textDecoration: 'none' }}>
+        <span className ="las la-truck"></span>
+        Suppliers</Link>
+        <Link to='/Users' className="users" style={{ textDecoration: 'none' }}>
+        <span className ="las la-user-circle"></span>
+        Users</Link>
+        <Link className="documents" style={{ textDecoration: 'none' }}>
+        <span className ="las la-suitcase"></span>
+        Documents</Link>
+        <Link className="reports" style={{ textDecoration: 'none' }}>
+        <span className ="las la-signal"></span>
+        Reports</Link>
         {/* <img
           className="e-commercetrolley-icon"
           alt=""
