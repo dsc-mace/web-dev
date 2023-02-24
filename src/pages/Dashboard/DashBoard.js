@@ -27,6 +27,7 @@ const Dashboard = () => {
     localStorage.clear();
   }
   return (
+    
     // <div className="dashboard">
     //   <div className="side-bar-icon"></div>
     //   <div>
@@ -52,8 +53,8 @@ const Dashboard = () => {
     // </div>
     <div>
 
-      <img className="asset24x1" alt="" src={require("../images/logo.png")} />
-      <Sidebar/>
+
+     
     </div>
     
   );
