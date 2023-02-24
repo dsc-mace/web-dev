@@ -1,20 +1,20 @@
 import { useCallback } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form } from "react-bootstrap";
-import "./Rfq.css";
-import Sidebar from "../Sidebar/sidebar";
+import "./smanagement.css";
+import Sidebar from "../../Dashboard/Sidebar/sidebar";
 
-const PurchaseOrderDashboard = () => {
+const Smanagement = () => {
 
   return (
     <div className="align">
-      <Sidebar/>
+      {/* <Sidebar/> */}
     
     <div className='dashboard-child'>
       {/* <img className="asset-24x-1" alt="" src={require('../../images/logo.png')} /> */}
       <br/>
     <div className='title'>
-        <h1>RFQ </h1>
+        <h1> Supplier Management </h1>
     </div>
     <br/>
 
@@ -29,22 +29,22 @@ const PurchaseOrderDashboard = () => {
 
           <div className="columnn">
             <div className="card4">
-            <p className="head1">Accepted</p>
+            <p className="head1">Approved</p>
             <h2 className="pp">2.890</h2>
             </div>
           </div>
 
           <div className="columnn">
             <div className="card4">
-            <p className="head1">Pending</p>
+            <p className="head1">Public</p>
              <h2 className="pp">$1.870</h2>
             </div>
           </div>
 
           <div className="columnn">
             <div className="card5">
-            <p >Create New</p>
-            <p className="pp">RFQ</p>
+            <p >Add a New</p>
+            <p className="pp">Supplier</p>
             </div>
           </div>
      </div>
@@ -54,4 +54,4 @@ const PurchaseOrderDashboard = () => {
   );
 };
 
-export default PurchaseOrderDashboard;
+export default Smanagement;

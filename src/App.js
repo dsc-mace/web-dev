@@ -11,6 +11,7 @@ import Emailverify from "./pages/EmailVerify/Emailverify";
 import Rfq from "./pages/Dashboard/Rfq/Rfq"
 import Sidebar from "./pages/Dashboard/Sidebar/sidebar";
 import MainDash from "./pages/Dashboard/MainDash/MainDash";
+import Smanagement from "./pages/supplier/smanagement/smanagement"
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         {/* <Route exact path="/Purchase-orders" element={<Orders />}></Route>
         <Route exact path="/Suppliers" element={<Suppliers />}></Route> */}
         <Route exact path="/Users" element={<Users />}></Route>
-        
+        <Route exact path="/Smanagement" element={<Smanagement />}></Route>
       </Routes>
     </Router>
   );
