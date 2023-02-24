@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form } from "react-bootstrap";
 import "./Rfq.css";
+import Sidebar from "../Sidebar/sidebar";
 
 const PurchaseOrderDashboard = () => {
 
@@ -52,6 +53,7 @@ const PurchaseOrderDashboard = () => {
      </div>
 
 </div>
+
   );
 };
 

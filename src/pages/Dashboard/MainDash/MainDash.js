@@ -1,4 +1,5 @@
 import React from 'react'
+import Sidebar from '../Sidebar/sidebar'
 import './MainDash.css'
 
 const data = [
@@ -8,7 +9,43 @@ const data = [
   ]
 function MainDash() {
   return (
-    <div>
+    <div className='align'>
+      <Sidebar/>
+    <div className="dashboard-child" >
+ 
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>User 1</td>
+              <td>User 2</td>
+              <td>User 3</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Sample 1</td>
+              <td>Sample 2</td>
+              <td>Sample 3</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Test 1</td>
+              <td>Test 2</td>
+              <td>Test 3</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    
         {/* <div className="App">
       <table>
         <tr>
@@ -27,38 +64,9 @@ function MainDash() {
         })}
       </table>
     </div>
-  ); */}
+      ); */}
   
-  <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>User 1</td>
-      <td>User 2</td>
-      <td>User 3</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Sample 1</td>
-      <td>Sample 2</td>
-      <td>Sample 3</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Test 1</td>
-      <td>Test 2</td>
-      <td>Test 3</td>
-    </tr>
-  </tbody>
-</table>
+  
     </div>
   )
 }

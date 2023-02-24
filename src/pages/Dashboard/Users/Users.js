@@ -5,11 +5,11 @@ import Dashboard from '../DashBoard';
 
 function Users() {
   return (
-    <div>
-        <Sidebar/>
-        <h1>
-            Test
-        </h1>
+    <div className='align'>
+       <Sidebar/>
+       <div className="dashboard-child" >
+        this is users page 
+       </div>
     </div>
   )
 }

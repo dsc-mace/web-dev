@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from "./sidebar.css"
 import { Link } from "react-router-dom";
+import Rfq from '../Rfq/Rfq';
+import MainDash from '../MainDash/MainDash';
 
 // import styles from "../../Dashboard/Dashboard.css"
 
@@ -11,9 +13,11 @@ function Sidebar() {
     
   return (
     <div>
+      
       <div className="dashboard">
+      <img className="asset24x1" alt="" src={require("../../images/logo.png")} />
       <div className="side-bar-icon"></div>
-      <div>
+      <div className='alignment'>
         <div className="navigation-menu">
         {/* <img
             className="e-commercesort-asc-icon"
@@ -34,27 +38,28 @@ function Sidebar() {
         <div className="locationhome-parent">
           {/* <img className="locationhome-icon" alt="" src="../locationhome.svg" /> */}
           {/* <button className="dashboard1">Dashboard</button> */}
-          <Link to="/Dashboard" className="dashboard1" style={{ textDecoration: 'none' }} >
+          <Link to="/Maindash" className="dashboard1" style={{ textDecoration: 'none' }} >
           <span className="las la-home"></span>
-        DashBoard
-      </Link>
+        DashBoard</Link>
         </div>
-        <Link className="rfq" style={{ textDecoration: 'none' }}>
+        
+        <Link to='/Rfq'  className="rfq" style={{ textDecoration: 'none' }}>
         <span className ="las la-file-alt"></span>
         RFQ</Link>
-        <Link className="purchase-orders" style={{ textDecoration: 'none' }}>
+       
+        <Link to='/Purchase-orders'  className="purchase-orders" style={{ textDecoration: 'none' }}>
         <span className ="las la-shopping-cart"></span>
         Purchase Orders</Link>
-        <Link className="suppliers" style={{ textDecoration: 'none' }}>
+        <Link to='/Suppliers'  className="suppliers" style={{ textDecoration: 'none' }}>
         <span className ="las la-truck"></span>
         Suppliers</Link>
         <Link to='/Users' className="users" style={{ textDecoration: 'none' }}>
         <span className ="las la-user-circle"></span>
         Users</Link>
-        <Link className="documents" style={{ textDecoration: 'none' }}>
+        <Link to='/Documents'  className="documents" style={{ textDecoration: 'none' }}>
         <span className ="las la-suitcase"></span>
         Documents</Link>
-        <Link className="reports" style={{ textDecoration: 'none' }}>
+        <Link to='/Reports'  className="reports" style={{ textDecoration: 'none' }}>
         <span className ="las la-signal"></span>
         Reports</Link>
         {/* <img
@@ -69,6 +74,12 @@ function Sidebar() {
         /> */}
                 <Link to="/Logout" className='logout' style={{ textDecoration: 'none' }} onClick={logout}>Logout</Link>
       </div>
+      <div className="dashboard-child" >
+        
+        {/* <Rfq/>  */}
+         {/* <MainDash/>  */}
+         {/* <Users/>  */}
+        </div>
     </div>
     </div>
       <div className="po-main-button">
@@ -79,11 +90,8 @@ function Sidebar() {
         <span className="hello">Hello</span>
         <b> Anwar</b>
       </div> */}
-      <div className="dashboard-child" >
-        {/* <MainDash/> */}
-        {/* <Users/> */}
-        </div>
-      {/* <img className="asset24x1" alt="" src={require("../../images/logo.png")} /> */}
+      
+     
       {/* <h1>
              This is the DashBoard
          </h1>
