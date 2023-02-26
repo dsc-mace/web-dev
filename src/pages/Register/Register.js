@@ -4,13 +4,12 @@ import LogoImage from '../../assets/images/logo.png'
 import HandshakeImage from '../../assets/images/handshake.png'
 
 import styles from './Register.module.scss'
+import Header from "../../components/Header/Header"
 
 const Register = () => {
     return (
         <div className={styles.Register}>
-            <div className={styles.Register__logoContainer}>
-                <img className={styles.Register__logo} src={LogoImage} alt="logo"/>
-            </div>
+            <Header/>
             <div className={styles.Register__sections}>
                 <section className={styles.Register__sections__left}>
                     <div className={styles.Register__contentContainer}>
