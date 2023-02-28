@@ -8,9 +8,14 @@ import LogoImage from '../../assets/images/logo.png'
 import HandshakeImage from '../../assets/images/handshake.png'
 import styles from './Login.module.scss'
 
+import AuthContext from "../../context/AuthContext"
+import { useContext } from "react"
+
 const Login = () => {
     const [form, setForm] = useState({})
     const [spinnerActive, setSpinnerActive] = useState(false)
+
+    const {user, login, logout} = useContext(AuthContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -37,7 +42,8 @@ const Login = () => {
                 return
             }
             const data = await res.json()
-            setSpinnerActive(false)
+            await login(data)
+            await setSpinnerActive(false)
             console.log(data)
         }
         asyncFunc()

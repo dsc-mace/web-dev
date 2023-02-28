@@ -6,19 +6,22 @@ import OrganizationDashboardHome from './pages/OrganizationDashboardHome/Organiz
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./App.css"
+import { AuthProvider } from './context/AuthContext'
 
 const App = () => {
     return (
         <>
         <ToastContainer />
-        <Router>
-            <Routes>
-                <Route path='/login' element={<Login/>}/>
-                <Route path='/register' element={<Register/>}/>
-                <Route path='/verification' element={<Verification/>}/>
-                <Route path='/organization/dashboard' element={<OrganizationDashboardHome/>}/>
-            </Routes>
-        </Router>
+        <AuthProvider>
+            <Router>
+                <Routes>
+                        <Route path='/login' element={<Login/>}/>
+                        <Route path='/register' element={<Register/>}/>
+                        <Route path='/verification' element={<Verification/>}/>
+                        <Route path='/organization/dashboard' element={<OrganizationDashboardHome/>}/>
+                </Routes>
+            </Router>
+        </AuthProvider>
         </>
     )
 }
