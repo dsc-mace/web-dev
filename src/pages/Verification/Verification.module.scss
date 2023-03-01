@@ -1,0 +1,42 @@
+@use "../../assets/scss/mixins.scss" as mixins;
+
+.Verification {
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        min-height: 85vh;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        
+    }
+
+    &__title {
+        font-size: 3.6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+    }
+
+    &__button {
+        width: fit-content;
+        padding: .7rem 3.6rem;
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        border: none;
+        background-color: #4200FF;
+        color: white;
+    }
+
+    &__imageContainer {
+        @include mixins.tablet {
+            display: none;
+        }
+    }
+}
