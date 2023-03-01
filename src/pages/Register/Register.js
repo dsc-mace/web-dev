@@ -20,40 +20,40 @@ const Register = () => {
                         <form className={styles.Register__form}>
                             <div className={styles.Register__formContainer}>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="text" placeholder="First Name"/>
+                                    <input className={styles.Register__formInput} name="first_name" type="text" placeholder="First Name"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="text" placeholder="Middle Name"/>
+                                    <input className={styles.Register__formInput} name="middle_name" type="text" placeholder="Middle Name"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="text" placeholder="Last Name"/>
+                                    <input className={styles.Register__formInput} name="last_name" type="text" placeholder="Last Name"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="email" placeholder="Email"/>
+                                    <input className={styles.Register__formInput} name="email" type="email" placeholder="Email"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="password" placeholder="Password"/>
+                                    <input className={styles.Register__formInput} name="password" type="password" placeholder="Password"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="password" placeholder="Confirm Password"/>
+                                    <input className={styles.Register__formInput} name="password2" type="password" placeholder="Confirm Password"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="text" placeholder="Phone"/>
+                                    <input className={styles.Register__formInput} name="phone" type="text" placeholder="Phone"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="text" placeholder="Designation"/>
+                                    <input className={styles.Register__formInput} name="designation" type="text" placeholder="Designation"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="text" placeholder="Address"/>
+                                    <input className={styles.Register__formInput} name="" type="address" placeholder="Address"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="text" placeholder="City"/>
+                                    <input className={styles.Register__formInput} name="" type="city" placeholder="City"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="text" placeholder="Country"/>
+                                    <input className={styles.Register__formInput} name="" type="country" placeholder="Country"/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <input className={styles.Register__formInput} type="text" placeholder="Zipcode"/>
+                                    <input className={styles.Register__formInput} name="" type="zipcode" placeholder="Zipcode"/>
                                 </div>
                             </div>
                             <button type="submit" className={styles.Register__formBtn}>Proceed</button>
