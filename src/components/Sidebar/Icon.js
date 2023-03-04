@@ -1,11 +1,11 @@
-import styles from './Sidebar.module.scss'
+import styles from './Icon.module.scss'
 
 const Icon = ({image, text}) => {
     return (
-        <div className={styles.Icon}>
+        <button className={styles.Icon}>
             <img src={image} className={styles.Icon__image}/>
-            <p className={styles.Icon__text}>Home</p>
-        </div>
+            <p className={styles.Icon__text}>{text}</p>
+        </button>
     )
 }
 

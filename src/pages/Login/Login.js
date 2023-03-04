@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { toast } from 'react-toastify'
 import { Oval } from 'react-loader-spinner'
 
@@ -14,6 +14,8 @@ import { useContext } from "react"
 const Login = () => {
     const [form, setForm] = useState({})
     const [spinnerActive, setSpinnerActive] = useState(false)
+
+    const navigate = useNavigate()
 
     const {user, login, logout} = useContext(AuthContext)
 
@@ -44,6 +46,7 @@ const Login = () => {
             const data = await res.json()
             await login(data)
             await setSpinnerActive(false)
+            navigate("/organization/dashboard")
             console.log(data)
         }
         asyncFunc()

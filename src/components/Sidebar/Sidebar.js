@@ -9,7 +9,11 @@ import Icon from './Icon'
 const Sidebar = () => {
     return (
         <div className={styles.Sidebar}>
-            {/* <Icon image={BriefcaseIcon} text="Home"/> */}
+            <Icon image={HomeIcon} text="Dashboard"/>
+            <Icon image={FileIcon} text="RFQ"/>
+            <Icon image={TrolleyIcon} text="Purchase Orders"/>
+            <Icon image={BriefcaseIcon} text="Documents"/>
+            <Icon image={SortIcon} text="Reports"/>
         </div>
     )
 }
