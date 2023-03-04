@@ -91,9 +91,6 @@ const Register = () => {
                                     <InputWithError onChange={handleInputChange} name="first_name" type="text" placeholder="First Name" errorMsg={formErrors["first_name"] && formErrors["first_name"][0]}/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
-                                    <InputWithError onChange={handleInputChange} name="middle_name" type="text" placeholder="Middle Name" errorMsg={formErrors["middle_name"] && formErrors["middle_name"][0]}/>
-                                </div>
-                                <div className={styles.Register__formGroup}>
                                     <InputWithError onChange={handleInputChange} name="last_name" type="text" placeholder="Last Name" errorMsg={formErrors["last_name"] && formErrors["last_name"][0]}/>
                                 </div>
                                 <div className={styles.Register__formGroup}>
