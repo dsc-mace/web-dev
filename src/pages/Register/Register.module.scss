@@ -86,10 +86,10 @@
     &__formGroup {
         grid-column: auto / span 2;
 
-        &:nth-child(1) {
-            grid-column: auto / span 1;
-        }
         &:nth-child(2) {
+            grid-column: auto / span 2;
+        }
+        &:nth-child(3) {
             grid-column: auto / span 1;
         }
 
@@ -191,6 +191,8 @@
         color: white;
         border: none;
         margin-bottom: 1.4rem;
+        display: flex;
+        justify-content: center;
         width: 100%;
     }
 
