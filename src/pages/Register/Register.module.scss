@@ -76,15 +76,37 @@
         // grid-auto-flow: column;
     }
     
-    &__formContainer {
+    &__formContainer,
+    &__formBottom {
         display: grid;
         grid-template-columns: repeat(2, 1fr) 2fr;
         gap: 1rem;
         margin-bottom: 1rem;
     }
 
+    &__formBottom {
+        margin-top: 4rem;
+        align-items: center;
+        button {
+            grid-column: auto / span 2;
+            @include mixins.mobile {
+                grid-column: 1 / 4;
+            }
+        }
+
+        p {
+            grid-column: auto / span 1;
+            font-size: 1.3rem;
+            @include mixins.mobile {
+                grid-column: 1 / 4;
+                text-align: center;
+            }
+        }
+    }
+
     &__formGroup {
         grid-column: auto / span 2;
+
         &:nth-child(1) {
             grid-column: auto / span 2;
         }
@@ -120,7 +142,7 @@
         }
 
         @include mixins.mobile {
-            grid-column: auto / span 3 !important;
+            grid-column: 1 / 4 !important;
 
             
             &:nth-last-child(4) {

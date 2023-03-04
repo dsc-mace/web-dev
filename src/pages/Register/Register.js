@@ -118,21 +118,24 @@ const Register = () => {
                                     <InputWithError onChange={handleInputChange} name="zipcode" type="zipcode" placeholder="Zipcode" errorMsg={formErrors["zipcode"] && formErrors["zipcode"][0]}/>
                                 </div>
                             </div>
-                            <button type="submit" className={styles.Register__formBtn}>
-                                <span>Proceed</span>&nbsp;
-                                <Oval
-                                    height={20}
-                                    width={20}
-                                    color="#ffffff"
-                                    wrapperStyle={{}}
-                                    wrapperClass=""
-                                    visible={spinnerActive}
-                                    ariaLabel='oval-loading'
-                                    secondaryColor="#bbbbbb"
-                                    strokeWidth={6}
-                                    strokeWidthSecondary={6}
-                                />
-                            </button>
+                            <div className={styles.Register__formBottom}>
+                                <button type="submit" className={styles.Register__formBtn}>
+                                    <span>Proceed</span>&nbsp;
+                                    <Oval
+                                        height={20}
+                                        width={20}
+                                        color="#ffffff"
+                                        wrapperStyle={{}}
+                                        wrapperClass=""
+                                        visible={spinnerActive}
+                                        ariaLabel='oval-loading'
+                                        secondaryColor="#bbbbbb"
+                                        strokeWidth={6}
+                                        strokeWidthSecondary={6}
+                                        />
+                                </button>
+                                <p>By creating an account, you are agreeing to our <strong>Privacy Policy</strong>, and <strong>Electronics Communication Policy</strong></p>
+                            </div>
                         </form>
                     </div>
                 </section>
