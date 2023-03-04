@@ -33,9 +33,9 @@ const Login = () => {
                 },
                 body: JSON.stringify(form)
             })
-            if(res.status !== 200) {
+            if(!res.ok) {
                 console.log('toastify')
-                toast("Some error occured!", {
+                toast("Couldn't Login!", {
                     type: 'error',
                 })
                 setSpinnerActive(false)

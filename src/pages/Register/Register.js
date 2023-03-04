@@ -12,7 +12,7 @@ import InputWithError from "../../components/InputWithError/InputWithError"
 import { Oval } from "react-loader-spinner"
 
 const Register = () => {
-    const [form, setForm] = useState({})
+    const [form, setForm] = useState({"middle_name": ""})
     const [formErrors, setFormErrors] = useState({})
     const [spinnerActive, setSpinnerActive] = useState(false)
 
@@ -65,6 +65,9 @@ const Register = () => {
             await login(data)
             await setSpinnerActive(false)
             console.log(data)
+            toast("Account is created. Verify the email", {
+                type: "success"
+            })
         }
         asyncFunc()
     }
