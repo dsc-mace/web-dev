@@ -87,7 +87,7 @@ const Login = () => {
                                     <input className={styles.Login__formInput__checkbox} type="checkbox" id="remember-me"/>
                                     <label htmlFor="remember-me">Remember me</label>
                                 </div>
-                                <Link className={styles.Login__formForgotPassword} to="/register">Forgot Password?</Link>
+                                <Link className={styles.Login__formForgotPassword} to="/forgot-password">Forgot Password?</Link>
                             </div>
                             <button type="submit" className={styles.Login__formBtn}>
                                 <span>Sign In</span>&nbsp;

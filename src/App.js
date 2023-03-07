@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./App.css"
 import { AuthProvider } from './context/AuthContext'
+import ForgotPassword from './pages/Login/ForgotPassword'
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
             <Router>
                 <Routes>
                         <Route path='/login' element={<Login/>}/>
+                        <Route path='/forgot-password' element={<ForgotPassword/>}/>
                         <Route path='/register' element={<Register/>}/>
                         <Route path='/verification' element={<Verification/>}/>
                         <Route path='/organization/dashboard' element={<OrganizationDashboardHome/>}/>
