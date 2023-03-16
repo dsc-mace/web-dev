@@ -4,7 +4,8 @@ import LogoImage from '../../assets/images/logo.png'
 const Header = () => {
     return (
         <div className={styles.Header}>
-            <img className={styles.Header__image} src={LogoImage} alt="logo"/>
+            {/* <img className={styles.Header__image} src={LogoImage} alt="logo"/> */}
+
         </div>
     )
 }

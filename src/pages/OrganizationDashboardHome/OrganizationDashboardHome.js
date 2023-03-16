@@ -1,13 +1,10 @@
-import Header from "../../components/Header/Header"
-import Sidebar from "../../components/Sidebar/Sidebar"
-import styles from "./OrganizationDashboardHome.module.scss"
+import OrganizationLayout from "../../components/OrganizationLayout/OrganizationLayout"
 
 const OrganizationDashboardHome = () => {
     return (
-        <div className={styles.Dashboard}>
-            <Header/>
-            <Sidebar/>
-        </div>
+        <OrganizationLayout>
+            <h1>Hello Anwar,</h1>
+        </OrganizationLayout>
     )
 }
 
