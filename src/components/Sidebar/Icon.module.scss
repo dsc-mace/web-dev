@@ -14,14 +14,14 @@
         // background-color: rgb(10, 147, 117);
         background-color: #F8F8F863;
     }
-
+    
 
     &__text {
         margin: 0;
         margin-left: 2rem;
         font-size: 1.6rem;
         display: none;
-
+        
         @include mixins.tablet {
             display: none;
         }
@@ -30,8 +30,12 @@
     &__image {
         width: 2.6rem;
     }
-
+    
     &__expanded &__text {
         display: block;
+    }
+    
+    &__active {
+        background-color: #F8F8F863;
     }
 }

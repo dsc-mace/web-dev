@@ -2,7 +2,7 @@ import OrganizationLayout from "../../components/OrganizationLayout/Organization
 
 const OrganizationDashboardHome = () => {
     return (
-        <OrganizationLayout>
+        <OrganizationLayout active="dashboard">
             <h1>Hello Anwar,</h1>
         </OrganizationLayout>
     )

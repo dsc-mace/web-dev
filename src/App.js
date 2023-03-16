@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./App.css"
 import { AuthProvider } from './context/AuthContext'
 import ForgotPassword from './pages/Login/ForgotPassword'
+import OrganizationDashboardRFQ from './pages/OrganizationDashboardRFQ/OrganizationDashboardRFQ'
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
                         <Route path='/register' element={<Register/>}/>
                         <Route path='/verification' element={<Verification/>}/>
                         <Route path='/organization/dashboard' element={<OrganizationDashboardHome/>}/>
+                        <Route path='/organization/rfq' element={<OrganizationDashboardRFQ/>}/>
                 </Routes>
             </Router>
         </AuthProvider>
