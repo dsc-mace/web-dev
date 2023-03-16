@@ -6,11 +6,12 @@ import SortIcon from '../../assets/icons/sort_asc.png'
 import BriefcaseIcon from '../../assets/icons/briefcase.png'
 import LogoImage from '../../assets/images/logo.png'
 import Icon from './Icon'
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { SidebarContext } from '../../context/SidebarContext'
 
 const Sidebar = ({active}) => {
-    const [expanded, setExpanded] = useState(true)
+    const {expanded, setExpanded} = useContext(SidebarContext)
 
     const toggleSidebar = () => setExpanded(prev => !prev)
 
