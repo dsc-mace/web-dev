@@ -45,6 +45,12 @@
   },
   "devDependencies": {
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "husky": "^8.0.3",
     "prettier": "^2.8.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "format"
+    }
   }
 }
