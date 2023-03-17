@@ -1,4 +1,4 @@
-@use "../../assets/scss/mixins.scss" as mixins;
+@use '../../assets/scss/mixins.scss' as mixins;
 
 .Login {
     min-height: 100vh;
@@ -18,20 +18,19 @@
         &__left {
             display: flex;
             flex-direction: column;
-            
+
             @include mixins.tablet {
                 flex-basis: 100%;
             }
         }
 
         &__right {
-            background-color: #194BFB;
-            
+            background-color: #194bfb;
+
             @include mixins.tablet {
                 display: none;
             }
         }
-
     }
 
     &__logo {
@@ -56,7 +55,7 @@
             margin-bottom: 1.6rem;
             font-weight: bold;
         }
-        
+
         &__sub {
             display: block;
             font-weight: 400;
@@ -75,7 +74,7 @@
 
     &__formGroup {
         width: 100%;
-        
+
         &:not(:last-child) {
             margin-bottom: 1rem;
         }
@@ -88,7 +87,7 @@
     }
 
     &__formInput {
-        border: 1px solid #A0AEC0;
+        border: 1px solid #a0aec0;
         font-size: 1.6rem;
         padding: 1.2rem;
         outline: none;
@@ -114,11 +113,11 @@
         font-weight: bold;
         text-decoration: none;
     }
-    
+
     &__formBtn {
         padding: 1.4rem;
         font-size: 1.6rem;
-        background-color: #0038FF;
+        background-color: #0038ff;
         font-weight: bold;
         color: white;
         border: none;

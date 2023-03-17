@@ -1,45 +1,43 @@
-@use "../../assets/scss/mixins.scss" as mixins;
+@use '../../assets/scss/mixins.scss' as mixins;
 
 .Register {
     // display: flex;
-    
+
     &__sections {
         display: flex;
         flex-grow: 1;
         min-height: 85vh;
         padding: 2rem;
-        
+
         &__left,
         &__right {
             align-items: stretch;
         }
-        
+
         &__left {
             flex-basis: 60%;
             display: flex;
             flex-direction: column;
             margin-right: 8rem;
-            
+
             @include mixins.tablet {
                 flex-basis: 100%;
                 margin-right: 0;
             }
         }
-        
+
         &__right {
             flex-basis: 40%;
             @include mixins.tablet {
                 display: none;
             }
         }
-
     }
-    
+
     &__logoContainer {
         padding: 2rem 2rem 0 2rem;
     }
 
-    
     &__contentContainer {
         display: flex;
         // background-color: yellow;
@@ -54,10 +52,10 @@
         &__main {
             display: block;
             font-size: 3.2rem;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
             font-weight: bold;
         }
-        
+
         &__sub {
             display: block;
             font-weight: 400;
@@ -75,7 +73,7 @@
     &__form {
         // grid-auto-flow: column;
     }
-    
+
     &__formContainer,
     &__formBottom {
         display: grid;
@@ -144,7 +142,6 @@
         @include mixins.mobile {
             grid-column: 1 / 4 !important;
 
-            
             &:nth-last-child(4) {
                 grid-row: auto / auto;
             }
@@ -160,8 +157,6 @@
         }
     }
 
-
-
     // &__formGroup {
     //     width: 100%;
 
@@ -172,7 +167,7 @@
     //     &__halfWidth {
     //         width: 50%;
     //     }
-        
+
     //     &:not(:last-child) {
     //         margin-bottom: 1rem;
     //     }
@@ -187,7 +182,7 @@
     // }
 
     &__formInput {
-        border: 1px solid #A0AEC0;
+        border: 1px solid #a0aec0;
         font-size: 1.6rem;
         padding: 1.2rem;
         outline: none;
@@ -213,11 +208,11 @@
         font-weight: bold;
         text-decoration: none;
     }
-    
+
     &__formBtn {
         padding: 1.4rem;
         font-size: 1.6rem;
-        background-color: #0038FF;
+        background-color: #0038ff;
         font-weight: bold;
         color: white;
         border: none;
@@ -240,7 +235,7 @@
         // max-width: 80rem;
         margin: 0 auto;
         color: white;
-        background-color: #194BFB;
+        background-color: #194bfb;
         border-radius: 2.2rem;
         padding: 10%;
     }
@@ -254,7 +249,7 @@
             font-size: 4rem;
             font-weight: bold;
         }
-        
+
         &__sub {
             display: block;
             font-weight: 400;
@@ -268,7 +263,6 @@
     }
 
     &__welcomeList {
-
     }
 
     &__welcomeListItem {

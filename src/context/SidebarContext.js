@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { createContext } from "react";
+import { useState } from 'react'
+import { createContext } from 'react'
 
 export const SidebarContext = createContext()
 
-export const SidebarProvider = ({children}) => {
+export const SidebarProvider = ({ children }) => {
     const [expanded, setExpanded] = useState(true)
 
-    return(
-        <SidebarContext.Provider value={{expanded, setExpanded}}>
+    return (
+        <SidebarContext.Provider value={{ expanded, setExpanded }}>
             {children}
         </SidebarContext.Provider>
     )

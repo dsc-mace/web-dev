@@ -1,5 +1,5 @@
-@use "../../assets/scss/variables.scss" as variables;
-@use "../../assets/scss/mixins.scss" as mixins;
+@use '../../assets/scss/variables.scss' as variables;
+@use '../../assets/scss/mixins.scss' as mixins;
 
 .Sidebar {
     background-color: #202264;
@@ -25,7 +25,7 @@
         align-items: center;
         height: variables.$header-height;
     }
-    
+
     &__image {
         height: 4.5rem;
         width: fit-content;

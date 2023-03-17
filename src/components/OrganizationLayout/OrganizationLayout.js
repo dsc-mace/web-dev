@@ -1,17 +1,15 @@
-import Header from "../Header/Header"
-import Sidebar from "../Sidebar/Sidebar"
-import styles from "./OrganizationLayout.module.scss"
+import Header from '../Header/Header'
+import Sidebar from '../Sidebar/Sidebar'
+import styles from './OrganizationLayout.module.scss'
 
-const OrganizationLayout = ({children, active}) => {
+const OrganizationLayout = ({ children, active }) => {
     return (
         <div className={styles.Layout}>
             <div className={styles.Layout__container}>
-                <Sidebar active={active}/>
+                <Sidebar active={active} />
                 <div className={styles.Layout__contentContainer}>
-                    <Header/>
-                    <div className={styles.Layout__content}>
-                        {children}
-                    </div>
+                    <Header />
+                    <div className={styles.Layout__content}>{children}</div>
                 </div>
             </div>
         </div>
