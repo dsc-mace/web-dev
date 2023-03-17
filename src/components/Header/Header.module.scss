@@ -3,9 +3,20 @@
 .Header {
     height: variables.$header-height;
     background-color: white;
+    display: flex;
+    align-items: center;
 
     &__image {
         padding: 2rem 2rem 0 2rem;
         height: 8rem;
+    }
+
+    &__title {
+    }
+
+    &__container {
+        width: 90%;
+
+        margin: 0 auto;
     }
 }

@@ -1,0 +1,21 @@
+.Rfq {
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.Cards {
+    display: flex;
+
+    &__card {
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__createNewCard {
+        background-color: #7800EF;
+        color: white;
+    }
+}
